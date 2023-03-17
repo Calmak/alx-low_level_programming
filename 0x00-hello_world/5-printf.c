@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Print using the function printf, compile without warning when using the -Wall gcc option
+ * main - Print using the function printf
  * Return: 0 (Success)
  */
 int main(void)
