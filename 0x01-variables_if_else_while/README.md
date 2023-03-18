@@ -1,1 +1,1 @@
-Write a program that prints all the numbers of base 16 in lowercase, followed by a new line: You can only use the putchar function
+Write a program that prints all possible combinations of single-digit numbers: Numbers must be separated by ,, followed by a space. Numbers should be printed in ascending order
