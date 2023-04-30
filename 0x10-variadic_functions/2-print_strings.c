@@ -4,15 +4,15 @@
 
 /**
  * print_strings - prints strings followed by a new line
- * @seperator: seperator between strings
+ * @separator: separator between strings
  * @n: number of arguments
+ * @...: variable number of strings to print
  */
 
-void print_strings(const char *seperator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	char *str;
-
 	va_list list;
 
 	va_start(list, n);
@@ -20,15 +20,15 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(list, char *);
-		if (!str)
-			str = "nil";
-		if (!seperator)
-			printf("%s", str);
-		else if (seperator && i == 0)
-			printf("%s", str);
+		if (str == NULL)
+			printf("(nil)");
 		else
-			printf("%s%s", seperator, str);
+			printf("%s", str);
+		if (i != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
+
 	printf("\n");
+
 	va_end(list);
 }
